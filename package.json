@@ -1,0 +1,21 @@
+{
+  "name": "next-use-cache-pool-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "start": "node --expose-gc ./node_modules/next/dist/bin/next start -p 3077",
+    "start:pool8k": "node --expose-gc --require ./pool8k.cjs ./node_modules/next/dist/bin/next start -p 3077",
+    "load": "node scripts/load.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
